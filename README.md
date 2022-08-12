@@ -1,4 +1,4 @@
-# Freebsd with zfs
+# Embedded Freebsd with zfs
 
 This is simple creation scripts of image.
 It creates ZFS root and set up root ssh login using ssh key.
