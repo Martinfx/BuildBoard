@@ -42,7 +42,7 @@ create_dataset() {
 #}
 
 create_img() {
-	dd if=/dev/zero of=$IMG bs=1M count=12k || exit 1
+	dd if=/dev/zero of=$IMG bs=1M count=4k || exit 1
 	mdconfig -a -f $IMG -u $DEV || exit 1
 	gpart create -s gpt $DEV || exit 1
 	gpart add -a 4k -b 32768 -s 64M -t efi -l efi $DEV
